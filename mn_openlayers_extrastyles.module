@@ -1,0 +1,18 @@
+<?php
+
+
+function mn_openlayers_extrastyles_ctools_plugin_api($module, $api) {
+  // Define plugins for OpenLayers plugins api
+  if ($module == "openlayers") {
+    switch ($api) {
+      case 'openlayers_styles':
+        return array('version' => 1);
+    }
+  }
+}
+
+function mn_openlayers_extrastyles_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'openlayers' && $plugin == 'style_plugin') {
+    return 'plugins/style_plugin';
+  }
+}
